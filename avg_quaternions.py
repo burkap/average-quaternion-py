@@ -26,7 +26,7 @@ def avg_quaternions(quaternions):
             q = -q
         A = (q * q.T) + A
 
-    A = (1 / M) * A
+    A = (1.0 / M) * A
 
     _, eig_vectors = np.linalg.eigh(A)
 

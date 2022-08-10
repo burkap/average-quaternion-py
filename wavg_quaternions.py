@@ -31,7 +31,7 @@ def wavg_quaternions(quaternions, weights):
         A = w_i * (q * q.T) + A
         wSum += w_i
 
-    A = (1 / wSum) * A
+    A = (1.0 / wSum) * A
 
     _, eig_vectors = np.linalg.eigh(A)
 
